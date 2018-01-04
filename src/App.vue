@@ -22,7 +22,7 @@
     并且在这里我们要放一个router-view标签，vue-router的切换就是通过这个标签开始显现的。-->
     <div class="container">
       <div class="col-sm-3">
-
+        <sidebar></sidebar>
       </div>
       <div class="col-sm-9">
         <router-view/>
@@ -32,18 +32,12 @@
 </template>
 
 <script>
+  import Sidebar from '@/components/Sidebar.vue'
+
   export default {
-    name: 'app'
+    name: 'app',
+    components: {
+      Sidebar
+    }
   }
 </script>
-
-<style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
-</style>
